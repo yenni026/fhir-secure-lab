@@ -57,7 +57,7 @@ Esto iniciará:
 ---
 
 ## 🧪 Pruebas automáticas con script
-    **se pone esto**
+   **se pone esto**
        ```bash
       ./scripts/lab-test.sh
 
