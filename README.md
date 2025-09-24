@@ -45,11 +45,11 @@ Esto iniciará:
 ## 🔑 Configuración de Keycloak
 La configuración está automatizada en los scripts.
 - Al levantar el laboratorio, se crea automáticamente:
-    - 1.Realm: fhir-realm.
-    - 2.Client: fhir-client.
-    - 3.Client Secret: my-client-secret.
-    - 4.Grant Type permitido: client_credentials.
-    - 5.Roles y permisos mínimos para acceder a la API.
+    - Realm: fhir-realm.
+    - Client: fhir-client.
+    - Client Secret: my-client-secret.
+    - Grant Type permitido: client_credentials.
+    - Roles y permisos mínimos para acceder a la API.
 
 - Puedes comprobarlo entrando a:
 - 👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
@@ -61,9 +61,7 @@ La configuración está automatizada en los scripts.
     ```bash
     ./scripts/lab-test.sh
 
-2. **Levantar el laboratorio con los scripts incluidos:**
-    ```bash
-    ./scripts/lab-up.sh
+
 
 Este hace lo siguiente:
 
@@ -73,6 +71,7 @@ Este hace lo siguiente:
 ---
 
 ## 🧪 Pruebas manuales con Postman
+
 1. **Probar acceso sin token**
      ```bash
     Método: POST
