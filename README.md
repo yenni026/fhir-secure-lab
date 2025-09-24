@@ -46,17 +46,19 @@ Esto iniciará:
 La configuración está automatizada en los scripts.
 - Al levantar el laboratorio, se crea automáticamente:
 
-    Realm: fhir-realm
-    Client: fhir-client
-    Client Secret: my-client-secret
-    Grant Type permitido: client_credentials
-    Roles y permisos mínimos para acceder a la API
+    Realm: fhir-realm.
+    Client: fhir-client.
+    Client Secret: my-client-secret.
+    Grant Type permitido: client_credentials.
+    Roles y permisos mínimos para acceder a la API.
 
 - Puedes comprobarlo entrando a:
--👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
+- 👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
 
- ## 🧪 Pruebas automáticas con script
-  **se pone esto**
+---
+
+## 🧪 Pruebas automáticas con script
+   **se pone esto**
      ```bash
     ./scripts/lab-test.sh
 
@@ -67,8 +69,8 @@ La configuración está automatizada en los scripts.
 3. Prueba un POST /Patient con token válido → debe dar 201 Created.
 
 ## 🧪 Pruebas manuales con Postman
-1. Probar acceso sin token
-
+1. **Probar acceso sin token**
+     ```bash
     Método: POST
     URL: http://localhost:9090/fhir/Patient
     Headers:
@@ -87,10 +89,11 @@ La configuración está automatizada en los scripts.
           }
         ]
     }
-    👉 Respuesta esperada:
-    401 Unauthorized con mensaje Jwt is missing 
+- 👉 Respuesta esperada:
+- 401 Unauthorized con mensaje Jwt is missing 
 
-2. Obtener un token en Postman
+2. **Obtener un token en Postman**
+     ```bash
     -En Postman, abre la pestaña Authorization.
     -Selecciona OAuth 2.0.
     -Haz clic en Get New Access Token.
@@ -106,7 +109,8 @@ La configuración está automatizada en los scripts.
     -Haz clic en Request Token.
     -Finalmente, selecciona Use Token.
     
-3. Probar acceso con token
+3. **Probar acceso con token**
+     ```bash
     Método: POST
     URL: http://localhost:9090/fhir/Patient
     Headers:
@@ -123,8 +127,8 @@ La configuración está automatizada en los scripts.
                 }
             ]
         }
-    👉 Respuesta esperada:
-    201 Created con un recurso Patient.
+- 👉 Respuesta esperada:
+- 201 Created con un recurso Patient.
 
 🛑 Parar y limpiar el laboratorio
 
