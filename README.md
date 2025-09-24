@@ -45,17 +45,18 @@ Esto iniciará:
 ## 🔑 Configuración de Keycloak
 La configuración está automatizada en los scripts.
 - Al levantar el laboratorio, se crea automáticamente:
-    - - Realm: fhir-realm.
-    Client: fhir-client.
-    Client Secret: my-client-secret.
-    Grant Type permitido: client_credentials.
-    Roles y permisos mínimos para acceder a la API.
+    - 1.Realm: fhir-realm.
+    - 2.Client: fhir-client.
+    - 3.Client Secret: my-client-secret.
+    - 4.Grant Type permitido: client_credentials.
+    - 5.Roles y permisos mínimos para acceder a la API.
 
 - Puedes comprobarlo entrando a:
 - 👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
 ---
 
-**🧪 Pruebas automáticas con script**
+## 🧪 Pruebas automáticas con script**
+1. **Se ingresa elcomando:**
      ```bash
     ./scripts/lab-test.sh
 
