@@ -61,8 +61,6 @@ La configuración está automatizada en los scripts.
     ```bash
     ./scripts/lab-test.sh
 
-
-
 Este hace lo siguiente:
 
 1. Solicita un token a Keycloak (client_credentials).
@@ -135,10 +133,9 @@ Este hace lo siguiente:
 
 🛑 Parar y limpiar el laboratorio
 
-Cuando termines, puedes apagar todo con:
-    ```bash
+    Cuando termines, puedes apagar todo con:
     ./scripts/lab-down.sh
-Esto detendrá y eliminará los contenedores y la red del laboratorio.
+    Esto detendrá y eliminará los contenedores y la red del laboratorio.
 
 📌 Endpoints principales
 
