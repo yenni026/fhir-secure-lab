@@ -94,21 +94,23 @@ Este hace lo siguiente:
 - 401 Unauthorized con mensaje Jwt is missing 
 
 2. **Obtener un token en Postman**
-     ```bash
-    -En Postman, abre la pestaña Authorization.
-    -Selecciona OAuth 2.0.
-    -Haz clic en Get New Access Token.
-    -Completa los campos:
-        Token Name: fhir-client
-        Grant Type: Client Credentials
-        Access Token URL:
-            http://localhost:8081/realms/fhir-realm/protocol/openid-connect/token
-        Client ID: fhir-client
-        Client Secret: my-client-secret
-        Scope: (vacío)
-        Client Authentication: Send as Basic Auth header
-    -Haz clic en Request Token.
-    -Finalmente, selecciona Use Token.
+
+En Postman, abre la pestaña Authorization.
+- Selecciona OAuth 2.0.
+- Haz clic en Get New Access Token.
+- Completa los campos:
+    - Token Name: fhir-client
+    - Grant Type: Client Credentials
+    - Client ID: fhir-client
+    - Client Secret: my-client-secret
+    - Scope: (vacío)
+    - Client Authentication: Send as Basic Auth header
+- **Access Token URL:**
+    ```bash
+    http://localhost:8081/realms/fhir-realm/protocol/openid-connect/token
+        
+- Haz clic en Request Token.
+- Finalmente, selecciona Use Token.
     
 3. **Probar acceso con token**
      ```bash
