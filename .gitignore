@@ -1,0 +1,20 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Carpetas de Docker
+*/data/
+*/db_data/
+*/kong_data/
+*/keycloak_data/
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Archivos de configuración sensible
+.env
+secrets/

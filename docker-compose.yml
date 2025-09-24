@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: hapi
+      POSTGRES_PASSWORD: hapi
+      POSTGRES_DB: hapi
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hapi -d hapi"]
+      interval: 5s
+      retries: 5
+  hapi-fhir:
+    image: hapiproject/hapi:v6.8.0
+    container_name: hapi-fhir
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      HAPI_FHIR_DB_URL: jdbc:postgresql://postgres:5432/hapi
+      HAPI_FHIR_DB_USER: hapi
+      HAPI_FHIR_DB_PASSWORD: hapi
+      HAPI_FHIR_DB_CREATE: "true"   # ⚠️ Esto hace que HAPI cree las tablas automáticamente
+    ports:
+      - "8080:8080"
+
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.2
+    container_name: keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command: start-dev
+    ports:
+      - "8081:8080"
+
+  envoy:
+    image: envoyproxy/envoy:v1.30.0
+    container_name: envoy
+    depends_on:
+      - hapi-fhir
+      - keycloak 
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml
+    
+
+
