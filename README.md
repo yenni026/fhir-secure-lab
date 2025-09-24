@@ -56,10 +56,8 @@ Esto iniciará:
     - 👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
 ---
 
-## 🧪 Pruebas automáticas con script
-
-   **se pone esto**
-       ```bash
+**🧪 Pruebas automáticas con script**
+     ```bash
     ./scripts/lab-test.sh
 
  - Este hace lo siguiente:
