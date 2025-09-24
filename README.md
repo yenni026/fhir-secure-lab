@@ -71,15 +71,16 @@ Este hace lo siguiente:
 ## 🧪 Pruebas manuales con Postman
 
 1. **Probar acceso sin token**
-     ```bash
-    Método: POST
-    URL: http://localhost:9090/fhir/Patient
-    Headers:
-    
+     
+Método: POST
+- **URL:**
+    ```bash
+    http://localhost:9090/fhir/Patient
+Headers:
     Content-Type: application/fhir+json
 
-    Body (JSON):
-    ``json
+- **Body (JSON):**
+    ```bash
     {
         "resourceType": "Patient",
         "name": [
@@ -113,31 +114,35 @@ En Postman, abre la pestaña Authorization.
 - Finalmente, selecciona Use Token.
     
 3. **Probar acceso con token**
-     ```bash
-    Método: POST
-    URL: http://localhost:9090/fhir/Patient
-    Headers:
-        Content-Type: application/fhir+json
-        Authorization: Bearer <TOKEN>
-    Body (JSON):
-        {
-            "resourceType": "Patient",
-            "name": [
-                {
-                "use": "official",
-                "family": "Lopez",
-                "given": ["Ana"]
-                }
-            ]
-        }
+     
+Método: POST
+- **URL:**
+    ```bash
+    http://localhost:9090/fhir/Patient
+Headers:
+    Content-Type: application/fhir+json
+    Authorization: Bearer <TOKEN>
+- **Body (JSON):**
+    ```bash
+    {
+        "resourceType": "Patient",
+        "name": [
+            {
+            "use": "official",
+            "family": "Lopez",
+            "given": ["Ana"]
+            }
+        ]
+    }
 - 👉 Respuesta esperada:
 - 201 Created con un recurso Patient.
 
 🛑 Parar y limpiar el laboratorio
 
-    Cuando termines, puedes apagar todo con:
+- **Cuando termines, puedes apagar todo con:**
+    ```bash
     ./scripts/lab-down.sh
-    Esto detendrá y eliminará los contenedores y la red del laboratorio.
+Esto detendrá y eliminará los contenedores y la red del laboratorio.
 
 📌 Endpoints principales
 
