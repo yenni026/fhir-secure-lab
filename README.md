@@ -135,9 +135,10 @@ Este hace lo siguiente:
 
 🛑 Parar y limpiar el laboratorio
 
-    Cuando termines, puedes apagar todo con:
+Cuando termines, puedes apagar todo con:
+    ```bash
     ./scripts/lab-down.sh
-    Esto detendrá y eliminará los contenedores y la red del laboratorio.
+Esto detendrá y eliminará los contenedores y la red del laboratorio.
 
 📌 Endpoints principales
 
