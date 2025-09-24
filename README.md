@@ -56,9 +56,14 @@ La configuración está automatizada en los scripts.
 ---
 
 ## 🧪 Pruebas automáticas con script
+
 1. **Se ingresa elcomando:**
     ```bash
     ./scripts/lab-test.sh
+
+2. **Levantar el laboratorio con los scripts incluidos:**
+    ```bash
+    ./scripts/lab-up.sh
 
 Este hace lo siguiente:
 
