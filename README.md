@@ -57,10 +57,10 @@ La configuración está automatizada en los scripts.
 
 ## 🧪 Pruebas automáticas con script
 1. **Se ingresa elcomando:**
-     ```bash
+    ```bash
     ./scripts/lab-test.sh
 
-- Este hace lo siguiente:
+Este hace lo siguiente:
 
 1. Solicita un token a Keycloak (client_credentials).
 2. Prueba un POST /Patient sin token → debe dar 401 Unauthorized.
