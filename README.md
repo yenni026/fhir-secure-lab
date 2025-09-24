@@ -46,7 +46,7 @@ Esto iniciará:
     La configuración está automatizada en los scripts.
     - Al levantar el laboratorio, se crea automáticamente:
 
-    Realm: fhir-realm.
+    - - Realm: fhir-realm.
     Client: fhir-client.
     Client Secret: my-client-secret.
     Grant Type permitido: client_credentials.
@@ -57,6 +57,7 @@ Esto iniciará:
 ---
 
 ## 🧪 Pruebas automáticas con script
+
    **se pone esto**
        ```bash
     ./scripts/lab-test.sh
