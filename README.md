@@ -55,7 +55,7 @@ La configuración está automatizada en los scripts.
 - 👉 http://localhost:8081 (usuario: admin, contraseña: admin si configuraste así).
 ---
 
-## 🧪 Pruebas automáticas con script**
+## 🧪 Pruebas automáticas con script
 1. **Se ingresa elcomando:**
      ```bash
     ./scripts/lab-test.sh
